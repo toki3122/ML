@@ -1,3 +1,7 @@
+#####################
+#python 3.14 or newer
+#####################
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -21,8 +25,8 @@ sns.set_style('whitegrid')
 #sns.boxplot(x='Pclass',y='Age',data=train,palette='winter')
 #puts average age onto the missing ages
 def impute_age(cols):
-    Age=cols[0]
-    Pclass=cols[1]
+    Age = cols['Age']
+    Pclass = cols['Pclass']
     if pd.isnull(Age):
         if Pclass==1:
             return 37
